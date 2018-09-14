@@ -49,7 +49,7 @@ body {
 #info div {
     padding-left: 10px;
     padding-right: 10px;
-    border: 1px white dotted;
+    border: 1px white solid;
     background: #222;
 }
 
@@ -90,12 +90,12 @@ body {
 
 #slider a {
     display: block;
-    padding: 8px;
+    padding: 6px;
     text-decoration: none;
     background: black;
     color: white;
-    font-size: 0.9rem;
-    border: 1px white dotted;
+    font-size: 0.8rem;
+    border: 1px white solid;
     font-family: 'Terminal', monospace;
     text-transform: uppercase;
 }
