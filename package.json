@@ -1,0 +1,24 @@
+{
+  "name": "demo-day",
+  "version": "1.0.0",
+  "description": "Demo Day August 2018",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LapperMedic/demo-day.git"
+  },
+  "author": "Alex Lapp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LapperMedic/demo-day/issues"
+  },
+  "homepage": "https://github.com/LapperMedic/demo-day#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "parcel": "^1.9.7"
+  }
+}

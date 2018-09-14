@@ -1,0 +1,7 @@
+export default `
+    <p>Gamma rays are the highest-energy radiation in the universe, and we thankfully seldom experience their effects.</p>
+	
+	<p>High in Earth's atmosphere, cosmic rays from distant stars and galaxies cause high-energy particle interactions and emit gamma rays. As slow as this process is, it overwhelms terrestrial gamma ray detectors compared to what the universe can produce.</p>
+	
+	<p>Supernovae, black holes, and blazars can emit gamma-ray bursts (GRB) that travel incredible distances. Though they only do so for an instant and are quite rare, a single GRB originating from within the Milky Way that crossed Earth's path could neutralize our ozone layer, sterilizing our planet in the blink of an eye.</p>
+`;
