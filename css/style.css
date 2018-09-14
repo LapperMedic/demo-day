@@ -3,7 +3,7 @@
     grid-template-rows: min-content 100% min-content;
     grid-template-columns: 1fr 2fr;
     font-family: 'Verdana', sans-serif;
-    min-height: 97vh;
+    min-height: 0px;
     min-width: 350px;
     color: white;
 }
@@ -107,6 +107,7 @@ body {
 
 @media screen and (min-width: 800px) {
     #root {
+        min-height: 97vh;
         grid-template-rows: min-content 100% min-content;
         grid-template-columns: 2fr 1fr;
     }
