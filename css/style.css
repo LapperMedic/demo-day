@@ -9,7 +9,7 @@
 }
 
 body {
-    background: no-repeat;
+    background: repeat-y;
     background-size: cover;
 }
 
@@ -110,6 +110,11 @@ body {
         min-height: 97vh;
         grid-template-rows: min-content 100% min-content;
         grid-template-columns: 2fr 1fr;
+    }
+
+    body {
+        background: no-repeat;
+        background-size: cover;
     }
     
     #header {
