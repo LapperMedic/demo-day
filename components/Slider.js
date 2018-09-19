@@ -15,17 +15,4 @@ export default function Slider(state) {
     sliderLinks += '</ul></div>';
 
     return sliderLinks;
-    // <div id="slider">
-    //     <input type="range" list="tickmarks" min="0" max="6" step="1" value="3">
-
-    //     <datalist id="tickmarks" style="display:block;">
-    //         <option value="0" label="Radio Waves">
-    //         <option value="1" label="Microwaves">
-    //         <option value="2" label="Infrared">
-    //         <option value="3" label="Visible Light">
-    //         <option value="4" label="Ultraviolet">
-    //         <option value="5" label="X-rays">
-    //         <option value="6" label="Gamma Rays">
-    //     </datalist>
-    // </div>
 }
