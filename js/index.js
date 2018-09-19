@@ -9,9 +9,13 @@ import * as State from '../store';
 
 var root = document.getElementById('root');
 var body = document.querySelector('body');
+var title = document.querySelector('title');
 var router = new Navigo(window.location.origin);
 
 function render(state){
+    title.textContent = `See With Different Eyes`;
+    if(state[state.active].title !== 'Visible Light')
+        title.textContent += ` | ${state[state.active].title}`;
     body.style.backgroundColor = state[state.active].loading;
     Axios
         .get(`https://i.imgur.com/${Space(state[state.active])}`)
