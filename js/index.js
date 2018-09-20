@@ -15,10 +15,10 @@ var router = new Navigo(window.location.origin);
 function render(state){
     title.textContent = `See With Different Eyes`;
     if(state[state.active].title !== 'Visible Light')
-        title.textContent += ` | ${state[state.active].title}`;
-    body.style.backgroundColor = state[state.active].loading;
+        title.textContent += ` | ${state[state.active].title}`; // dynamic title based on current page
+    body.style.backgroundColor = state[state.active].loading; // preload low-res space image
     Axios
-        .get(`https://i.imgur.com/${Space(state[state.active])}`)
+        .get(`https://i.imgur.com/${Space(state[state.active])}`) // fetch normal-res space image
         .then(body.style.backgroundImage = `url('https://i.imgur.com/${Space(state[state.active])}')`);
     root.innerHTML = `${Header(state[state.active])} ${Earth(state[state.active])} ${Info(state[state.active])} ${Slider(state)}`
     router.updatePageLinks();

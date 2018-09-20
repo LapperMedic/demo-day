@@ -8,7 +8,7 @@ export default function Slider(state) {
         }
 
         else if(state[link].content == state[state.active].content) {
-            sliderLinks += `<li><a href="/${state[link].content}" class="active" data-navigo>${state[link].title}</a></li>`;
+            sliderLinks += `<li><a href="/${state[link].content}" class="active" data-navigo>${state[link].title}</a></li>`; // active page navbar highlighting
         }
     });
 
