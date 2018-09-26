@@ -11,6 +11,7 @@
 body {
     background: repeat-y;
     background-size: cover;
+    transition: 0.25s background ease;
 }
 
 #header {
@@ -51,11 +52,13 @@ body {
     padding-right: 10px;
     border: 1px white solid;
     background: #222;
+    transition: 0.15s all ease;
 }
 
 #info p {
     margin-top: 12px;
     margin-bottom: 12px;
+    transition: 0.15s all ease;
 }
 
 #earth {
@@ -65,6 +68,7 @@ body {
     background-repeat: no-repeat;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+    transition: 0.15s all ease;
 }
 
 #slider {
@@ -98,11 +102,13 @@ body {
     border: 1px white solid;
     font-family: 'Terminal', monospace;
     text-transform: uppercase;
+    transition: 0.15s all ease;
 }
 
 #slider a:hover, #slider a.active {
     background: white;
     color: black;
+    transition: 0.15s all ease;
 }
 
 @media screen and (min-width: 775px) {
