@@ -39,6 +39,19 @@ body {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+#demo {
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+    padding-bottom: 90px;
+    color: white;
+    font-size: 18pt;
+}
+
+#demo:hover {
+    cursor: pointer;
+}
+
 #info {
     grid-row: 3 / 4;
     grid-column: 1 / 4;
@@ -130,6 +143,10 @@ body {
 
     #header h2 {
         font-size: 1.8rem;
+    }
+
+    #demo {
+        padding-bottom: 100px;
     }
     
     #info {
