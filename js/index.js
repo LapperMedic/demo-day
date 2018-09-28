@@ -11,7 +11,7 @@ var root = document.getElementById('root');
 var body = document.querySelector('body');
 var title = document.querySelector('title');
 var demoMode = false;
-var demoTime = 8000; // in milliseconds
+var demoTime = 10000; // in milliseconds
 var demoTimeout;
 var demoModeSwitch;
 var pages = Object.keys(State);
@@ -35,6 +35,7 @@ function render(state){
     `;  // Put the HTML content in the page. Header is title, Earth is Earth image, Info is text block, Slider is navbar
 
     // document.querySelector('#earth').style.backgroundImage = `url('https://i.imgur.com/${state[state.active].earth}`;
+
     demoModeSwitch = document.getElementById('demo');
 
     demoModeSwitch.addEventListener('click', (event) => {         // When we click the header
@@ -75,7 +76,6 @@ function demo(activePage){                                      // A demo mode f
 
 function demoToggle(polarity){  // A shortcut which cosmetically swaps the demomode switch icon
     demoModeSwitch.innerHTML = `<i class="fas fa-toggle-${polarity}" title="Autoplay is ${polarity}"></i>`;
-    console.log(`Demo mode is ${polarity}.`);
 }
 
 function handleNav(activePage){

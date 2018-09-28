@@ -3,5 +3,5 @@ export default `
     
     <p>On this tour, you'll be shown images of Earth and the Milky Way with false-color images compiled by advanced telescopes, allowing you to get a better idea of what emits, reflects, and absorbs various types of radiation all around you and in the wider universe.</p>
 
-    <p><b>Click one of the buttons along the edge of the page to start!</b></p>
+    <p><b>Press one of the buttons</b> along the edge of the page to start, or <b>try the auto-play switch</b> up top for the tour!</p>
 `;
