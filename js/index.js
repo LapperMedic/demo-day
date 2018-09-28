@@ -69,9 +69,9 @@ function render(state){
 function demo(activePage){                                      // A demo mode for presenting the site. Auto scrolling.
     let index = pages.findIndex((page) => page === activePage); // Figure out what index the active page is.
     if(index === 6)                                             // If we're at gamma,
-        demoTimeout = setTimeout(() => { handleNav(pages[0]) }, demoTime); // Set a timer to take us back to radio.
+        demoTimeout = setTimeout(() => { router.navigate(pages[0]); }, demoTime); // Set a timer to take us back to radio.
     else                                                        // Otherwise,
-        demoTimeout = setTimeout(() => { handleNav(pages[index + 1]) }, demoTime); // Set a timer to go forward a page.
+        demoTimeout = setTimeout(() => { router.navigate(pages[index + 1]); }, demoTime); // Set a timer to go forward.
 }
 
 function demoToggle(polarity){  // A shortcut which cosmetically swaps the demomode switch icon
