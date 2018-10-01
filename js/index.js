@@ -49,20 +49,41 @@ function render(state){
     });
 
     document.querySelectorAll('#slider a').forEach((link) =>
-            link.addEventListener('click', () => { // When we click on a navbar link
-                demoToggle('off');                 // toggle the demoMode switch
-                demoMode = false;                  // stop demo mode
-                clearTimeout(demoTimeout);         // and cancel any timers.
-            })
-    );
+            link.addEventListener('click', () => demoOff()));         // When we click a navbar link, turn demoMode off.
+
+    document.addEventListener('keypress', (event) => {  // Number key shortcuts
+        if(event.key >= '0' && event.key <= '7'){       // If the key is 1--7,
+            demoOff();                                  // turn demoMode off
+            router.navigate(pages[event.key - 1]);      // and navigate to the corresponding page.
+        }
+    });
+
+    // let index = pages.findIndex((page) => page === state.active);
+
+    // document.addEventListener('keydown', (event) => {
+    //     if(event.key === 'ArrowLeft' || event.key === 'ArrowUp'){
+    //         demoOff();
+    //         if(index === 0)
+    //             router.navigate(pages[6]);
+    //         else
+    //             router.navigate(pages[index - 1]);
+    //     }
+
+    //     else if(event.key === 'ArrowRight' || event.key === 'ArrowDown'){
+    //         demoOff();
+    //         if(index === 6)
+    //             router.navigate(pages[0]);
+    //         else
+    //             router.navigate(pages[index + 1]);
+    //     }
+    // });
 
     if(demoMode) {              // If demoMode is active
         demoToggle('on');       // toggle the demoMode switch on
         demo(state.active);     // and start demoMode.
     }
     else                        // Otherwise
-        demoToggle('off');      // toggle the demoMode switch off
-
+        demoToggle('off');      // toggle demoMode off.
     router.updatePageLinks();
 }
 
@@ -76,6 +97,12 @@ function demo(activePage){                                      // A demo mode f
 
 function demoToggle(polarity){  // A shortcut which cosmetically swaps the demomode switch icon
     demoModeSwitch.innerHTML = `<i class="fas fa-toggle-${polarity}" title="Autoplay is ${polarity}"></i>`;
+}
+
+function demoOff(){
+    demoMode = false;                  // Stop demo mode
+    demoToggle('off');                 // toggle the demoMode switch
+    clearTimeout(demoTimeout);         // and cancel any timers.
 }
 
 function handleNav(activePage){
