@@ -19,7 +19,7 @@ var router = new Navigo(window.location.origin);
 pages.shift();
 
 function render(state){
-    title.textContent = `See With Different Eyes`;
+    title.textContent = `See with Different Eyes`;
     if(state[state.active].title !== 'Visible Light')
         title.textContent += ` | ${state[state.active].title}`; // dynamic title based on current page
     body.style.backgroundColor = state[state.active].loading; // preload low-res space image
