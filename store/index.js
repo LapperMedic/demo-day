@@ -1,4 +1,5 @@
 export { default as active } from './Active';
+export { default as about } from './About';
 export { default as radio } from './Radio';
 export { default as micro } from './Micro';
 export { default as infra } from './Infra';

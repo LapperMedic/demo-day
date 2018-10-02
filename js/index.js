@@ -17,6 +17,7 @@ var demoModeSwitch;
 var pages = Object.keys(State);
 var router = new Navigo(window.location.origin);
 pages.shift();
+pages.shift(); // Remove "About" and "Active" from array
 
 function render(state){
     title.textContent = `See with Different Eyes`;
@@ -50,7 +51,9 @@ function render(state){
 
     document.querySelectorAll('#slider a').forEach((link) =>
             link.addEventListener('click', () => demoOff()));         // When we click a navbar link, turn demoMode off.
-
+    
+    document.querySelector('#about a').addEventListener('click', () => demoOff());  // Likewise for the about link.
+    
     document.addEventListener('keypress', (event) => {  // Number key shortcuts
         if(event.key >= '0' && event.key <= '7'){       // If the key is 1--7,
             demoOff();                                  // turn demoMode off

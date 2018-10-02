@@ -48,8 +48,22 @@ body {
     font-size: 18pt;
 }
 
-#demo:hover {
+#demo i:hover, #about i:hover {
     cursor: pointer;
+}
+
+#about, #about a {
+    display: flex;
+    position: absolute;
+    align-self: flex-start;
+    padding-bottom: 105px;
+    color: white;
+    font-size: 15pt;
+    text-decoration: none;
+}
+
+#about a:hover {
+    cursor: default;
 }
 
 #info {
@@ -72,6 +86,10 @@ body {
     margin-top: 12px;
     margin-bottom: 12px;
     transition: 0.15s all ease;
+}
+
+#info a {
+    color: white;
 }
 
 #earth {
@@ -147,6 +165,10 @@ body {
 
     #demo {
         padding-bottom: 100px;
+    }
+
+    #about {
+        padding-bottom: 115px;
     }
     
     #info {

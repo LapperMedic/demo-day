@@ -5,3 +5,4 @@ export { default as visible } from './Visible';
 export { default as uv } from './UV';
 export { default as xray } from './Xray';
 export { default as gamma } from './Gamma';
+export { default as about } from './About';
