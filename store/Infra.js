@@ -1,7 +1,8 @@
 export default {
     'title': 'Infrared',
     'earth': 'c6flBZz.png',
-    'space': 'Qtls1ro.jpg',
-    'loading': 'black',
+    'space': 'URUDUT2.jpg',
+    'loading': '2BUkcZ1.jpg',
+    'bg': '#0b1420',
     'content': 'infra'
 };

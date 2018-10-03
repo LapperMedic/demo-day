@@ -1,7 +1,8 @@
 export default {
     'title': 'Visible Light',
     'earth': 'default',
-    'space': 'BhawByN.png',
-    'loading': '#222',
+    'space': 'LygYJ45.jpg',
+    'loading': '1HLbcyR.jpg',
+    'bg': '#141316',
     'content': 'visible'
 };

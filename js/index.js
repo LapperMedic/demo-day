@@ -23,9 +23,13 @@ function render(state){
     title.textContent = `See with Different Eyes`;
     if(state[state.active].title !== 'Visible Light')
         title.textContent += ` | ${state[state.active].title}`; // dynamic title based on current page
-    body.style.backgroundColor = state[state.active].loading; // preload low-res space image
+
+    body.style.backgroundColor = `${state[state.active].bg}`; // colored background for no 'flash' during load
     Axios
-        .get(`https://i.imgur.com/${Space(state[state.active])}`) // fetch normal-res space image
+        .get(`https://i.imgur.com/${state[state.active].loading}`) // fetch low-res space image
+        .then(body.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].loading}')`)
+    Axios
+        .get(`https://i.imgur.com/${Space(state[state.active])}`) // fetch hi-res space image
         .then(body.style.backgroundImage = `url('https://i.imgur.com/${Space(state[state.active])}')`);
 
     root.innerHTML = `

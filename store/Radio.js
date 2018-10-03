@@ -1,7 +1,8 @@
 export default {
     'title': 'Radio Waves',
     'earth': 'gyyLDBv.png',
-    'space': '8Loh6Bw.png',
-    'loading': 'purple',
+    'space': '2EINpw8.jpg',
+    'loading': 'QsnHUHq.jpg',
+    'bg': '#380039',
     'content': 'radio'
 };

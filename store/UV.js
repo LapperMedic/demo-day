@@ -1,7 +1,8 @@
 export default {
     'title': 'Ultraviolet',
     'earth': 'XagBjgP.png',
-    'space': 'LA4UES7.png',
-    'loading': 'darkred',
+    'space': 'QX4KQNH.jpg',
+    'loading': 'SWlZlVw.jpg',
+    'bg': '#890700',
     'content': 'uv'
 };

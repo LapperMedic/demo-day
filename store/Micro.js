@@ -1,7 +1,8 @@
 export default {
     'title': 'Microwaves',
     'earth': 'LdJfvEq.png',
-    'space': 'MGmt3JW.jpg',
-    'loading': 'lightblue',
+    'space': 'iXDYohR.jpg',
+    'loading': '1g6RjzY.jpg',
+    'bg': '#88568c',
     'content': 'micro'
 };
