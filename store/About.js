@@ -1,7 +1,8 @@
 export default {
     'title': 'About This Site',
     'earth': 'ql8jb4v.png',
-    'space': 'BhawByN.png',
-    'loading': '#222',
+    'space': 'SezmJyz.jpg',
+    'loading': '1qwCqQW.jpg',
+    'bg': '#5d4579',
     'content': 'about'
 };
