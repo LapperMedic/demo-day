@@ -35,7 +35,10 @@ function render(state){
         ${Slider(state)}
     `;  // Put the HTML content in the page. Header is title, Earth is Earth image, Info is text block, Slider is navbar
 
-    // document.querySelector('#earth').style.backgroundImage = `url('https://i.imgur.com/${state[state.active].earth}`;
+    if(state[state.active].earth == 'default')
+        document.querySelector('#earth').style.backgroundImage = '';
+    else
+        document.querySelector('#earth').style.backgroundImage = `url('https://i.imgur.com/${state[state.active].earth}`;
 
     demoModeSwitch = document.getElementById('demo');
 
@@ -61,25 +64,8 @@ function render(state){
         }
     });
 
-    // let index = pages.findIndex((page) => page === state.active);
-
-    // document.addEventListener('keydown', (event) => {
-    //     if(event.key === 'ArrowLeft' || event.key === 'ArrowUp'){
-    //         demoOff();
-    //         if(index === 0)
-    //             router.navigate(pages[6]);
-    //         else
-    //             router.navigate(pages[index - 1]);
-    //     }
-
-    //     else if(event.key === 'ArrowRight' || event.key === 'ArrowDown'){
-    //         demoOff();
-    //         if(index === 6)
-    //             router.navigate(pages[0]);
-    //         else
-    //             router.navigate(pages[index + 1]);
-    //     }
-    // });
+    // document.removeEventListener('keypress', (event) => arrowNav(event, state.active));
+    // document.addEventListener('keypress', (event) => arrowNav(event, state.active));
 
     if(demoMode) {              // If demoMode is active
         demoToggle('on');       // toggle the demoMode switch on
@@ -106,6 +92,34 @@ function demoOff(){
     demoMode = false;                  // Stop demo mode
     demoToggle('off');                 // toggle the demoMode switch
     clearTimeout(demoTimeout);         // and cancel any timers.
+}
+
+function arrowNav(event, activePage){
+    let index = pages.findIndex((page) => page === activePage);
+
+    if(event.key === 'a' || event.key === 'w'){
+        demoOff();
+        if(index === 0) {
+            router.navigate(pages[6]);
+            return;
+        }
+        else {
+            router.navigate(pages[index - 1]);
+            return;
+        }
+    }
+
+    else if(event.key === 'd' || event.key === 's'){
+        demoOff();
+        if(index === 6) {
+            router.navigate(pages[0]);
+            return;
+        }
+        else {
+            router.navigate(pages[index + 1]);
+            return;
+        }
+    }
 }
 
 function handleNav(activePage){

@@ -1,6 +1,6 @@
 export default {
     'title': 'Visible Light',
-    'earth': 'white',
+    'earth': 'default',
     'space': 'BhawByN.png',
     'loading': '#222',
     'content': 'visible'

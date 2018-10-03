@@ -1,6 +1,6 @@
 export default {
     'title': 'X-rays',
-    'earth': 'white',
+    'earth': 'pthCg6m.png',
     'space': 'jGtBnAn.jpg',
     'loading': 'green',
     'content': 'xray'

@@ -1,6 +1,6 @@
 export default {
     'title': 'Gamma Rays',
-    'earth': 'white',
+    'earth': 'R6lXfPR.png',
     'space': 'oWBHR1R.jpg',
     'loading': 'darkblue',
     'content': 'gamma'
