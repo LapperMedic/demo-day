@@ -16,8 +16,7 @@ var demoTimeout;
 var demoModeSwitch;
 var pages = Object.keys(State);
 var router = new Navigo(window.location.origin);
-pages.shift();
-pages.shift(); // Remove "About" and "Active" from array
+pages.splice(0, 2); // Remove "About" and "Active" from array
 
 function render(state){
     title.textContent = `See with Different Eyes`;
@@ -68,9 +67,6 @@ function render(state){
         }
     });
 
-    // document.removeEventListener('keypress', (event) => arrowNav(event, state.active));
-    // document.addEventListener('keypress', (event) => arrowNav(event, state.active));
-
     if(demoMode) {              // If demoMode is active
         demoToggle('on');       // toggle the demoMode switch on
         demo(state.active);     // and start demoMode.
@@ -96,34 +92,6 @@ function demoOff(){
     demoMode = false;                  // Stop demo mode
     demoToggle('off');                 // toggle the demoMode switch
     clearTimeout(demoTimeout);         // and cancel any timers.
-}
-
-function arrowNav(event, activePage){
-    let index = pages.findIndex((page) => page === activePage);
-
-    if(event.key === 'a' || event.key === 'w'){
-        demoOff();
-        if(index === 0) {
-            router.navigate(pages[6]);
-            return;
-        }
-        else {
-            router.navigate(pages[index - 1]);
-            return;
-        }
-    }
-
-    else if(event.key === 'd' || event.key === 's'){
-        demoOff();
-        if(index === 6) {
-            router.navigate(pages[0]);
-            return;
-        }
-        else {
-            router.navigate(pages[index + 1]);
-            return;
-        }
-    }
 }
 
 function handleNav(activePage){

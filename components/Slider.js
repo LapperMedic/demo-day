@@ -1,8 +1,7 @@
 export default function Slider(state) {
     var links = Object.keys(state);
     var sliderLinks = '<div id="slider"><ul>';
-    links.shift();
-    links.shift(); // remove Active and About pages from array
+    links.splice(0, 2); // Remove "About" and "Active" from array
 
     links.forEach(link => {
         if(state[link].content != state[state.active].content) {
