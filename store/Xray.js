@@ -1,6 +1,7 @@
 export default {
     'title': 'X-rays',
     'earth': 'pthCg6m.png',
+    'sun': 'azWaw7o.png',
     'space': 'L2Dk1eN.jpg',
     'loading': '5Owx4i4.jpg',
     'bg': '#2d6c0e',

@@ -95,7 +95,7 @@ body {
 }
 
 #earth {
-    background-image: url('../components/img/earth.png');
+    background-image: url('../components/img/earth/earth.png');
     background-position: fixed;
     background-position-x: 15px;
     background-position-y: 15px;
