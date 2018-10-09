@@ -47,15 +47,15 @@ function render(state){
             earthImage.style.backgroundImage = '';
         else
             earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].earth}`;
-    } // Earth display mode
+    } // Earth display mode, pull from earth images
 
     else if(displayMode === 1){
         earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].sun}`;
-    } // Sun display mode
+    } // Sun display mode, pull from sun images
 
     else if(displayMode === 2){
         earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].moon}`;
-    } // Moon display mode
+    } // Moon display mode, pull from moon images
 
     if(state[state.active].content != 'about'){ // Add mode switching links unless we're on the about page
         document.getElementById('earth-mode').addEventListener('click', (event) => {
