@@ -106,6 +106,41 @@ body {
     transition: 0.15s all ease;
 }
 
+.switcher {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: -8px;
+}
+
+.switcher li {
+    padding: 2px;
+    text-align: center;
+}
+
+.switcher a {
+    display: block;
+    padding: 6px;
+    text-decoration: none;
+    background: black;
+    color: white;
+    font-size: 1rem;
+    border: 1px white solid;
+    font-family: 'Terminal', monospace;
+    text-transform: uppercase;
+    transition: 0.15s all ease;
+}
+
+.switcher .active {
+    background: white;
+    color: black;
+    transition: 0.15s all ease;
+}
+
 #slider {
     grid-row: 2 / 3;
     grid-column: 1 / 2;

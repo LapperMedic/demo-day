@@ -10,10 +10,12 @@ import * as State from '../store';
 var root = document.getElementById('root');
 var body = document.querySelector('body');
 var title = document.querySelector('title');
+var earthImage;
 var demoMode = false;
 var demoTime = 10000; // in milliseconds
 var demoTimeout;
 var demoModeSwitch;
+var displayMode = 0;
 var pages = Object.keys(State);
 var router = new Navigo(window.location.origin);
 pages.splice(0, 2); // Remove "About" and "Active" from array
@@ -38,10 +40,42 @@ function render(state){
         ${Slider(state)}
     `;  // Put the HTML content in the page. Header is title, Earth is Earth image, Info is text block, Slider is navbar
 
-    if(state[state.active].earth == 'default')
-        document.querySelector('#earth').style.backgroundImage = '';
-    else
-        document.querySelector('#earth').style.backgroundImage = `url('https://i.imgur.com/${state[state.active].earth}`;
+    earthImage = document.getElementById('earth');
+
+    if(displayMode === 0){
+        if(state[state.active].earth == 'default')
+            earthImage.style.backgroundImage = '';
+        else
+            earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].earth}`;
+    } // Earth display mode
+
+    else if(displayMode === 1){
+        earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].sun}`;
+    } // Sun display mode
+
+    else if(displayMode === 2){
+        earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].moon}`;
+    } // Moon display mode
+
+    if(state[state.active].content != 'about'){ // Add mode switching links unless we're on the about page
+        document.getElementById('earth-mode').addEventListener('click', (event) => {
+            event.preventDefault();
+            displayMode = 0;
+            handleNav(`${state.active}`);
+        });
+
+        document.getElementById('sun-mode').addEventListener('click', (event) => {
+            event.preventDefault();
+            displayMode = 1;
+            handleNav(`${state.active}`);
+        });
+
+        document.getElementById('moon-mode').addEventListener('click', (event) => {
+            event.preventDefault();
+            displayMode = 2;
+            handleNav(`${state.active}`);
+        });
+    }
 
     demoModeSwitch = document.getElementById('demo');
 

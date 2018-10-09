@@ -5,7 +5,7 @@ export default `
 	
 	<p>UVB radiation comprises the remaining 5% of the sun's UV rays that reach Earth's surface, as this radiation is handily blocked by the ozone layer as well as clouds and other atmospheric conditions.</p>
 	
-	<p>UVC radiation is completely absorbed by our ozone layer and does not reach the surface, causing the planet to appear featureless and opaque from this perspective.</p>
+	<!--<p>UVC radiation is completely absorbed by our ozone layer and does not reach the surface, causing the planet to appear featureless and opaque from this perspective.</p>-->
 	
 	<p>But it's not just our sun that emits UV waves; every other star does as well, so they are also visible to our newly-minted UV eyes.</p>
 `;
