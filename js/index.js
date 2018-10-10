@@ -11,6 +11,9 @@ var root = document.getElementById('root');
 var body = document.querySelector('body');
 var title = document.querySelector('title');
 var earthImage;
+var earthMode;
+var sunMode;
+var moonMode;
 var demoMode = false;
 var demoTime = 10000; // in milliseconds
 var demoTimeout;
@@ -41,36 +44,48 @@ function render(state){
     `;  // Put the HTML content in the page. Header is title, Earth is Earth image, Info is text block, Slider is navbar
 
     earthImage = document.getElementById('earth');
+    earthMode = document.getElementById('earth-mode');
+    sunMode = document.getElementById('sun-mode');
+    moonMode = document.getElementById('moon-mode');
 
     if(displayMode === 0){
         if(state[state.active].earth == 'default')
             earthImage.style.backgroundImage = '';
         else
             earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].earth}`;
+        earthMode.classList.add('active');
+        sunMode.classList.remove('active');
+        moonMode.classList.remove('active');
     } // Earth display mode, pull from earth images
 
     else if(displayMode === 1){
         earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].sun}`;
+        earthMode.classList.remove('active');
+        sunMode.classList.add('active');
+        moonMode.classList.remove('active');
     } // Sun display mode, pull from sun images
 
     else if(displayMode === 2){
         earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].moon}`;
+        earthMode.classList.remove('active');
+        sunMode.classList.remove('active');
+        moonMode.classList.add('active');
     } // Moon display mode, pull from moon images
 
     if(state[state.active].content != 'about'){ // Add mode switching links unless we're on the about page
-        document.getElementById('earth-mode').addEventListener('click', (event) => {
+        earthMode.addEventListener('click', (event) => {
             event.preventDefault();
             displayMode = 0;
             handleNav(`${state.active}`);
         });
 
-        document.getElementById('sun-mode').addEventListener('click', (event) => {
+        sunMode.addEventListener('click', (event) => {
             event.preventDefault();
             displayMode = 1;
             handleNav(`${state.active}`);
         });
 
-        document.getElementById('moon-mode').addEventListener('click', (event) => {
+        moonMode.addEventListener('click', (event) => {
             event.preventDefault();
             displayMode = 2;
             handleNav(`${state.active}`);
@@ -79,7 +94,7 @@ function render(state){
 
     demoModeSwitch = document.getElementById('demo');
 
-    demoModeSwitch.addEventListener('click', (event) => {         // When we click the header
+    demoModeSwitch.addEventListener('click', () => {              // When we click the header
         demoMode = !demoMode;                                     // toggle demoMode on or off
         if(demoMode)                                              // set the demoMode switch to reflect this
             demoToggle('on');         
@@ -95,7 +110,7 @@ function render(state){
     document.querySelector('#about a').addEventListener('click', () => demoOff());  // Likewise for the about link.
     
     document.addEventListener('keypress', (event) => {  // Number key shortcuts
-        if(event.key >= '0' && event.key <= '7'){       // If the key is 1--7,
+        if(event.key >= '1' && event.key <= '7'){       // If the key is 1--7,
             demoOff();                                  // turn demoMode off
             router.navigate(pages[event.key - 1]);      // and navigate to the corresponding page.
         }

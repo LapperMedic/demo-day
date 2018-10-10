@@ -133,9 +133,13 @@ body {
     font-family: 'Terminal', monospace;
     text-transform: uppercase;
     transition: 0.15s all ease;
+    cursor: pointer;
 }
 
-.switcher .active {
+.switcher a.active,
+.switcher a:hover,
+.switcher a.active i,
+.switcher a:hover i {
     background: white;
     color: black;
     transition: 0.15s all ease;
