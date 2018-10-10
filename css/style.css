@@ -74,6 +74,15 @@ body {
     justify-content: flex-end;
     align-content: flex-end;
     align-items: flex-end;
+    transition: 0.15s all ease;
+}
+
+#info.hidden {
+    opacity: .25;
+}
+
+#info.hidden:hover {
+    opacity: 1;
 }
 
 #info div {

@@ -24,6 +24,7 @@ export default function Info(state){
                         <li title="View Earth in ${state.title}"><a id="earth-mode"><i class="fas fa-globe-americas"></i></a></li>
                         <li title="View the Sun in ${state.title}"><a id="sun-mode"><i class="fas fa-sun"></i></a></li>
                         <li title="View the Moon in ${state.title}"><a id="moon-mode"><i class="fas fa-moon"></i></a></li>
+                        <li title="Hide"><a id="empty-mode"><i class="fas fa-ban"></i></a></li>
                     </ul>
                     ${Pages[state.content]}
                 </div>
