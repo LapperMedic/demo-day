@@ -39,9 +39,9 @@ function render(state) {
         .then(body.style.backgroundImage = `url('https://i.imgur.com/${Space(state[state.active])}')`);
 
     root.innerHTML = `
-        ${Header(state[state.active])}
-        ${Earth(state[state.active])}
-        ${Info(state[state.active])}
+        ${Header(state)}
+        ${Earth()}
+        ${Info(state)}
         ${Slider(state)}
     `;  // Put the HTML content in the page. Header is title, Earth is Earth image, Info is text block, Slider is navbar
 
@@ -117,7 +117,7 @@ function render(state) {
         });
     }
 
-    else {
+    else { // if we're on the about page
         earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].earth}`;
         displayMode = 0;
         infoBox.classList.remove('hidden');
