@@ -40,7 +40,7 @@ function render(state) {
 
     root.innerHTML = `
         ${Header(state)}
-        ${Earth()}
+        ${Earth(state, displayMode)}
         ${Info(state)}
         ${Slider(state)}
     `;  // Put the HTML content in the page. Header is title, Earth is Earth image, Info is text block, Slider is navbar
