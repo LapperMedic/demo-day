@@ -1,5 +1,5 @@
 export default `
-    <p>While our sun constantly bombards our planet with ultraviolet radiation, we can see different effects from the varying wavelengths.</p>
+    <p>While our sun constantly bombards our planet with <a href="https://en.m.wikipedia.org/wiki/Ultraviolet" target="_blank">ultraviolet</a> radiation, we can see different effects from the varying wavelengths.</p>
 	
 	<p>UVA radiation represents 95% of ultraviolet waves that reach Earth's surface from the sun. Black lights emit UVA radiation, though their purple glow is the small portion of visible light emitted, not UV itself.</p>
 	
