@@ -182,6 +182,11 @@ function handleNav(activePage) {
 }
 
 router
-    .on('/:page', (params) => handleNav(params.page))
+    .on('/:page', (params) => { // Redirect any 404 to the landing page
+        if(Object.keys(State).findIndex((page) => page === params.page) != -1 && params.page != 'active')
+            handleNav(params.page);
+        else
+            handleNav('visible');
+    })
     .on('/', () => handleNav('visible'))
     .resolve();
