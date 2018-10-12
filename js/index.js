@@ -51,11 +51,11 @@ function render(state) {
     sunMode = document.getElementById('sun-mode');
     moonMode = document.getElementById('moon-mode');
     emptyMode = document.getElementById('empty-mode');
-
+    // Populate the earth div with the correct image for the given page and displayMode
     if (state[state.active].content != 'about') {
         if (displayMode === 0) {
             if (state[state.active].earth == 'default')
-                earthImage.style.backgroundImage = '';
+                earthImage.style.backgroundImage = ''; // Default earth image from style.css
             else
                 earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].earth}`;
             earthMode.classList.add('active');  // Highlight the Earth button
@@ -93,9 +93,9 @@ function render(state) {
         } // Empty display mode, hide image
 
         earthMode.addEventListener('click', (event) => { // Add mode switching links
-            event.preventDefault();
-            displayMode = 0;
-            handleNav(`${state.active}`);
+            event.preventDefault();                      // don't take us anywhere
+            displayMode = 0;                             // we're in Earth mode
+            handleNav(`${state.active}`);                // refresh the page
         });
 
         sunMode.addEventListener('click', (event) => {
@@ -117,7 +117,7 @@ function render(state) {
         });
     }
 
-    else { // if we're on the about page
+    else { // if we're on the about page, everything resets to default behavior
         earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].earth}`;
         displayMode = 0;
         infoBox.classList.remove('hidden');
@@ -127,7 +127,7 @@ function render(state) {
 
     demoModeSwitch.addEventListener('click', () => {              // When we click the header
         demoMode = !demoMode;                                     // toggle demoMode on or off
-        if (demoMode)                                              // set the demoMode switch to reflect this
+        if (demoMode)                                             // set the demoMode switch to reflect this
             demoToggle('on');
         else
             demoToggle('off');
@@ -147,7 +147,7 @@ function render(state) {
         }
     });
 
-    if (demoMode) {              // If demoMode is active
+    if (demoMode) {             // If demoMode is active
         demoToggle('on');       // toggle the demoMode switch on
         demo(state.active);     // and start demoMode.
     }
