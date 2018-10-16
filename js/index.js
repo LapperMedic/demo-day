@@ -60,52 +60,28 @@ function render(state) {
                 earthImage.style.backgroundImage = ''; // Default earth image from style.css
             else
                 earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].earth}`;
-            earthMode.classList.add('active');  // Highlight the Earth button
-            sunMode.classList.remove('active');
-            moonMode.classList.remove('active');
-            videoMode.classList.remove('active');
-            emptyMode.classList.remove('active');
-            infoBox.classList.remove('hidden');
+            activeMode(0);
         } // Earth display mode, pull from earth images
 
         else if (displayMode === 1) {
             earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].sun}`;
-            earthMode.classList.remove('active');
-            sunMode.classList.add('active');    // Highlight the Sun button
-            moonMode.classList.remove('active');
-            videoMode.classList.remove('active');
-            emptyMode.classList.remove('active');
-            infoBox.classList.remove('hidden');
+            activeMode(1);
         } // Sun display mode, pull from sun images
 
         else if (displayMode === 2) {
             earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].moon}`;
-            earthMode.classList.remove('active');
-            sunMode.classList.remove('active');
-            moonMode.classList.add('active');   // Highlight the Moon button
-            videoMode.classList.remove('active');
-            emptyMode.classList.remove('active');
-            infoBox.classList.remove('hidden');
+            activeMode(2);
         } // Moon display mode, pull from moon images
 
         else if (displayMode === 3) {
             earthImage.style.backgroundImage = 'none';
-            earthImage.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${state[state.active].video}?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
-            earthMode.classList.remove('active');
-            sunMode.classList.remove('active');
-            moonMode.classList.remove('active');
-            videoMode.classList.add('active');  // Highlight the Video button
-            emptyMode.classList.remove('active');  
-            infoBox.classList.remove('hidden');
+            earthImage.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${state[state.active].video}?start=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+            activeMode(3); 
         } // Video display mode, hide image and embed video
 
         else if (displayMode === 4) {
             earthImage.style.backgroundImage = 'none';
-            earthMode.classList.remove('active');
-            sunMode.classList.remove('active');
-            moonMode.classList.remove('active');
-            emptyMode.classList.add('active');  // Highlight the Empty button
-            infoBox.classList.add('hidden');    // Hide the info box
+            activeMode(4);
         } // Empty display mode, hide image
 
         earthMode.addEventListener('click', (event) => { // Add mode switching links
@@ -142,7 +118,7 @@ function render(state) {
     else { // if we're on the about page, everything resets to default behavior
         earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].earth}`;
         displayMode = 0;
-        infoBox.classList.remove('hidden');
+        activeMode(0);
     }
 
     demoModeSwitch = document.getElementById('demo');
@@ -194,6 +170,16 @@ function demoOff() {
     demoMode = false;                  // Stop demo mode
     demoToggle('off');                 // toggle the demoMode switch
     clearTimeout(demoTimeout);         // and cancel any timers.
+}
+
+function activeMode(mode) { // Highlighting for mode buttons
+    var modeArray = [earthMode, sunMode, moonMode, videoMode, emptyMode];
+    modeArray.forEach((mode) => mode.classList.remove('active'));
+    modeArray[mode].classList.add('active');
+    if (mode === 4)
+        infoBox.classList.add('hidden');
+    else
+        infoBox.classList.remove('hidden');
 }
 
 function handleNav(activePage) {
