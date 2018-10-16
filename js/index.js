@@ -77,12 +77,12 @@ function render(state) {
             earthImage.style.backgroundImage = 'none';
             earthImage.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${state[state.active].video}?start=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
             activeMode(3); 
-        } // Video display mode, hide image and embed video
+        } // Video display mode, pull embedded video
 
         else if (displayMode === 4) {
             earthImage.style.backgroundImage = 'none';
             activeMode(4);
-        } // Empty display mode, hide image
+        } // Empty display mode, hide image and info box
 
         earthMode.addEventListener('click', (event) => { // Add mode switching links
             event.preventDefault();                      // don't take us anywhere
@@ -176,7 +176,7 @@ function activeMode(mode) { // Highlighting for mode buttons
     var modeArray = [earthMode, sunMode, moonMode, videoMode, emptyMode];
     modeArray.forEach((mode) => mode.classList.remove('active'));
     modeArray[mode].classList.add('active');
-    if (mode === 4)
+    if (mode === 4) // If we're in hidden mode, hide the info box
         infoBox.classList.add('hidden');
     else
         infoBox.classList.remove('hidden');
