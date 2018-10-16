@@ -42,6 +42,9 @@ export default function Info(state){
                         <li title="View the Moon in ${state[state.active].title}">
                             <a id="moon-mode"><i class="fas fa-moon"></i></a>
                         </li>
+                        <li title="View a video about ${state[state.active].title}">
+                            <a id="video-mode"><i class="fas fa-play"></i></a>
+                        </li>
                         <li title="Hide">
                             <a id="empty-mode"><i class="fas fa-ban"></i></a>
                         </li>

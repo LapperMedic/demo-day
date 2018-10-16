@@ -15,6 +15,7 @@ var earthImage;
 var earthMode;
 var sunMode;
 var moonMode;
+var videoMode;
 var emptyMode;
 var demoMode = false;
 var demoTime = 10000; // in milliseconds
@@ -50,6 +51,7 @@ function render(state) {
     earthMode = document.getElementById('earth-mode');
     sunMode = document.getElementById('sun-mode');
     moonMode = document.getElementById('moon-mode');
+    videoMode = document.getElementById('video-mode');
     emptyMode = document.getElementById('empty-mode');
     // Populate the earth div with the correct image for the given page and displayMode
     if (state[state.active].content != 'about') {
@@ -61,6 +63,7 @@ function render(state) {
             earthMode.classList.add('active');  // Highlight the Earth button
             sunMode.classList.remove('active');
             moonMode.classList.remove('active');
+            videoMode.classList.remove('active');
             emptyMode.classList.remove('active');
             infoBox.classList.remove('hidden');
         } // Earth display mode, pull from earth images
@@ -70,6 +73,7 @@ function render(state) {
             earthMode.classList.remove('active');
             sunMode.classList.add('active');    // Highlight the Sun button
             moonMode.classList.remove('active');
+            videoMode.classList.remove('active');
             emptyMode.classList.remove('active');
             infoBox.classList.remove('hidden');
         } // Sun display mode, pull from sun images
@@ -79,11 +83,23 @@ function render(state) {
             earthMode.classList.remove('active');
             sunMode.classList.remove('active');
             moonMode.classList.add('active');   // Highlight the Moon button
+            videoMode.classList.remove('active');
             emptyMode.classList.remove('active');
             infoBox.classList.remove('hidden');
         } // Moon display mode, pull from moon images
 
         else if (displayMode === 3) {
+            earthImage.style.backgroundImage = 'none';
+            earthImage.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${state[state.active].video}?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+            earthMode.classList.remove('active');
+            sunMode.classList.remove('active');
+            moonMode.classList.remove('active');
+            videoMode.classList.add('active');  // Highlight the Video button
+            emptyMode.classList.remove('active');  
+            infoBox.classList.remove('hidden');
+        } // Video display mode, hide image and embed video
+
+        else if (displayMode === 4) {
             earthImage.style.backgroundImage = 'none';
             earthMode.classList.remove('active');
             sunMode.classList.remove('active');
@@ -110,9 +126,15 @@ function render(state) {
             handleNav(`${state.active}`);
         });
 
-        emptyMode.addEventListener('click', (event) => {
+        videoMode.addEventListener('click', (event) => {
             event.preventDefault();
             displayMode = 3;
+            handleNav(`${state.active}`);
+        });
+
+        emptyMode.addEventListener('click', (event) => {
+            event.preventDefault();
+            displayMode = 4;
             handleNav(`${state.active}`);
         });
     }
@@ -141,7 +163,7 @@ function render(state) {
     document.querySelector('#about a').addEventListener('click', () => demoOff());  // Likewise for the about link.
 
     document.addEventListener('keypress', (event) => {  // Number key shortcuts
-        if (event.key >= '1' && event.key <= '7') {       // If the key is 1--7,
+        if (event.key >= '1' && event.key <= '7') {     // If the key is 1--7,
             demoOff();                                  // turn demoMode off
             router.navigate(pages[event.key - 1]);      // and navigate to the corresponding page.
         }

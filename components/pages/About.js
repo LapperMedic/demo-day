@@ -6,7 +6,7 @@ export default `
     <ul>
         <li>Built in JS, with JSON, AJAX, HTML, and CSS</li>
         <li>Modular construction and rapid page loading</li>
-        <li>Fully responsive and accessible visual layout</li>
+        <li>Fully responsive, accessible single-page layout</li>
         <li>Clean navigation with smooth page transitions</li>
         <li>Educational and clearly explained content</li>
         <li>Autoplay mode for presentation</li>

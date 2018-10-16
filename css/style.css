@@ -116,6 +116,16 @@ body {
     transition: 0.15s all ease;
 }
 
+#earth iframe {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    width: 95%;
+    height: 95%;
+}
+
 .switcher {
     display: flex;
     justify-content: center;
