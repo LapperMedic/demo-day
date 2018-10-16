@@ -16,7 +16,7 @@ export default function Header(state){
                 <span id="about"><a href="/about" data-navigo><i class="fas fa-info-circle" title="About tihs site"></i></a></span>
                 <span id="demo"></span>
                 <h1>What if you could see...</h1>
-                <h2>...with different eyes?</h2>
+                <h2>with different eyes?</h2>
             </div>
         `
     }
