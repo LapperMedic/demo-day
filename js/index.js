@@ -118,7 +118,7 @@ function render(state) {
     else { // if we're on the about page, everything resets to default behavior
         earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].earth}`;
         displayMode = 0;
-        activeMode(0);
+        infoBox.classList.remove('hidden');
     }
 
     demoModeSwitch = document.getElementById('demo');
