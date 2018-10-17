@@ -85,7 +85,7 @@ body {
     opacity: 1;
 }
 
-#info div {
+#info > div {
     padding-left: 12px;
     padding-right: 12px;
     border: 1px white solid;
@@ -205,6 +205,14 @@ body {
     transition: 0.15s all ease;
 }
 
+#at-expanding-share-button {
+    opacity: .4;
+}
+
+#at-expanding-share-button:hover {
+    opacity: 1;
+}
+
 @media screen and (min-width: 765px) {
     #root {
         min-height: 97vh;
@@ -267,6 +275,10 @@ body {
         font-size: 0.97rem;
         font-weight: normal;
     }
+
+    #at-expanding-share-button {
+        opacity: 1;
+    }
 }
 
 @media screen and (min-width: 1600px) {
@@ -289,5 +301,9 @@ body {
     #slider a {
         font-size: 1.5rem;
         font-weight: normal;
+    }
+    
+    #at-expanding-share-button {
+        opacity: 1;
     }
 }
