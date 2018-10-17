@@ -13,12 +13,17 @@ export default function Info(state){
                         </li>
                         <li title="LinkedIn">
                             <a href="https://linkedin.com/in/alexlapp/" target="_blank">
-                                <i class="fab fa-linkedin" ></i>
+                                <i class="fab fa-linkedin"></i>
                             </a>
                         </li>
                         <li title="GitHub">
                             <a href="https://github.com/LapperMedic/demo-day" target="_blank">
-                                <i class="fab fa-github" ></i>
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li title="JSON">
+                            <a href="../js/diffeyes.json" target="_blank">
+                                <i class="fas fa-code"></i>
                             </a>
                         </li>
                     </ul>

@@ -1,0 +1,79 @@
+[
+    {
+        "title": "Radio Waves",
+        "bg": "#380039",
+        "earth": "http://i.imgur.com/gyyLDBv.png",
+        "sun": "http://i.imgur.com/ZbO9t7m.png",
+        "moon": "http://i.imgur.com/y4vSDKE.png",
+        "space": "http://i.imgur.com/2EINpw8.jpg",
+        "loading": "http://i.imgur.com/QsnHUHq.jpg",
+        "video": "http://youtube.com/watch/w3M4cqAMWQs",
+        "content": "<p>At the low end of the EM spectrum, <a href=\"https://en.m.wikipedia.org/wiki/Radio_wave\" target=\"_blank\">radio waves</a> light up both the Earth and sky.</p>\n<p>Radio waves are in frequent use on Earth, from radio and television broadcast to GPS signals and satellite communication. Some radio waves are reflected by the Earth's atmosphere, but many more escape in all directions, creating a sphere of radio influence that extends away from our planet for over 100 lightyears.</p>\n<p>But these signals are not just domestic. Shifting magnetic fields also create radio waves, causing stars, planets, and especially pulsars and black holes to emit radio waves that are visible to us from great distances.</p>"
+    },
+    {
+        "title": "Microwaves",
+        "bg": "#88568c",
+        "earth": "http://i.imgur.com/LdJfvEq.png",
+        "sun": "http://i.imgur.com/XnlDW4q.png",
+        "moon": "http://i.imgur.com/gBs1tti.png",
+        "space": "http://i.imgur.com/iXDYohR.jpg",
+        "loading": "http://i.imgur.com/1g6RjzY.jpg",
+        "video": "http://youtube.com/watch/3tCMd1ytvWg",
+        "content": "<p><a href=\"https://en.m.wikipedia.org/wiki/Microwave\" target=\"_blank\">Microwaves</a> have significant overlap with radio waves, but the most noticeable difference is the background of space.</p>\n<p>While microwave ovens allow us to heat food quickly, uses for this radiation are myriad. Microwaves are used to transmit internet data, television signals, and telephone communications, all via microwave satellite. These satellites allow us to observe extremely minor changes in ocean level and temperature, shown here centered over Europe and Africa.</p>\n<p>The universe at large is made visible through the <a href=\"https://en.m.wikipedia.org/wiki/Cosmic_microwave_background\" target=\"_blank\">cosmic microwave background</a> (CMB), a remnant from the very young universe, prior to the <a href=\"https://en.m.wikipedia.org/wiki/Recombination_(cosmology)\" target=\"_blank\">recombination epoch</a>. Before this time, particles interacted with each other so frequently that space was opaque.</p>"
+    },
+    {
+        "title": "Infrared",
+        "bg": "#0b1420",
+        "earth": "http://i.imgur.com/c6flBZz.png",
+        "sun": "http://i.imgur.com/PoTXzar.png",
+        "moon": "http://i.imgur.com/C8pOkDe.png",
+        "space": "http://i.imgur.com/URUDUT2.jpg",
+        "loading": "http://i.imgur.com/2BUkcZ1.jpg",
+        "video": "http://youtube.com/watch/KwvXcUe10OQ",
+        "content": "<p><a href=\"https://en.m.wikipedia.org/wiki/Infrared\" target=\"_blank\">Infrared</a> waves exist just outside of the range we can see, but nearly everything in our lives radiates infrared waves as heat.</p>\n<p>The hotter an object is, the more energetic its <a href=\"https://en.m.wikipedia.org/wiki/Thermal_radiation\" target=\"_blank\">thermal radiation</a> is. \"Red-hot\" objects have a high enough temperature that they radiate in the visible spectrum, while night vision and thermal imagery rely on infrared to see colder objects, like humans. From our perspective on high, water vapor and clouds block significant portions of infrared, allowing us to see the turbulent nature of Earth's atmosphere.</p>\n<p>Stars shine brightly in infrared even when their visible light is obscured by gas clouds or nebulae. Infrared also allows us to see distant stars that would otherwise be lost to us due to the expansion of the universe&mdash;as a star's light is <a href=\"https://en.m.wikipedia.org/wiki/Redshift\" target=\"_blank\">redshifted</a> beyond the visible spectrum, only infrared telescopes can detect their ancient rays.</p>"
+    },
+    {
+        "title": "Visible Light",
+        "bg": "#141316",
+        "earth": "http://i.imgur.com/dGBAEsQ.png",
+        "sun": "http://i.imgur.com/DNtuZ3r.png",
+        "moon": "http://i.imgur.com/pnYON8m.png",
+        "space": "http://i.imgur.com/LygYJ45.jpg",
+        "loading": "http://i.imgur.com/1HLbcyR.jpg",
+        "video": "http://youtube.com/watch/jjy-eqWM38g",
+        "content": "<p>Our eyes are wonderful and fascinating machines, able to see great distances and fine details alike, all in a vast range of color. But <a href=\"https://en.m.wikipedia.org/wiki/Light\" target=\"_blank\">visible light</a> represents an extremely narrow band of the <a href=\"https://en.m.wikipedia.org/wiki/Electromagnetic_spectrum\" target=\"_blank\">electromagnetic spectrum</a>, despite comprising everything humans can see. But what if we could see with different eyes? What would we see if our eyes were sensitive to infrared light, or radio waves, or x-rays?</p>\n<p>On this tour, you'll be shown images of the Earth, Sun, Moon, and the Milky Way with false-color images compiled by advanced telescopes, allowing you to get a better idea of what emits, reflects, and absorbs various types of radiation all around you and in the wider universe.</p>\n<p>Press one of the buttons along the edge of the page to start, or try the autoplay switch up top for the tour!</p>"
+    },
+    {
+        "title": "Ultraviolet",
+        "bg": "#890700",
+        "earth": "http://i.imgur.com/XagBjgP.png",
+        "sun": "http://i.imgur.com/GrTxFCn.png",
+        "moon": "http://i.imgur.com/asQlUfi.png",
+        "space": "http://i.imgur.com/QX4KQNH.jpg",
+        "loading": "http://i.imgur.com/SWlZlVw.jpg",
+        "video": "http://youtube.com/watch/ZSJITdsTze0",
+        "content": "<p>While our sun constantly bombards our planet with <a href=\"https://en.m.wikipedia.org/wiki/Ultraviolet\" target=\"_blank\">ultraviolet</a> radiation, we can see different effects from the varying wavelengths. UV is <a href=\"https://en.m.wikipedia.org/wiki/Ionizing_radiation\">ionizing</a>, meaning it has enough energy to separate electrons from atoms and thereby damage our bodies.</p>\n<p>UVA radiation represents 95% of ultraviolet waves that reach Earth's surface from the sun. Black lights emit UVA radiation, though their purple glow is the small portion of visible light emitted, not UV itself.</p>\n<p>UVB radiation comprises the remaining 5% of the sun's UV rays that reach Earth's surface, as this radiation is handily blocked by the ozone layer as well as clouds and other atmospheric conditions.</p>\n<p>But it's not just our sun that emits UV waves; every other star does as well, so they are also visible to our newly-minted UV eyes.</p>"
+    },
+    {
+        "title": "X-rays",
+        "bg": "#2d6c0e",
+        "earth": "http://i.imgur.com/pthCg6m.png",
+        "sun": "http://i.imgur.com/azWaw7o.png",
+        "moon": "http://i.imgur.com/iLnAZNF.png",
+        "space": "http://i.imgur.com/L2Dk1eN.jpg",
+        "loading": "http://i.imgur.com/5Owx4i4.jpg",
+        "video": "http://youtube.com/watch/fujdEiRR-K8",
+        "content": "<p><a href=\"https://en.m.wikipedia.org/wiki/X-ray\" target=\"_blank\">X-rays</a> are high-energy radiation, some that you won't find emitted by many sources on Earth.</p>\n<p>While the name brings to mind medical and security technologies, the few x-rays visible from Earth exist largely in the high-energy particles that comprise <a href=\"https://en.m.wikipedia.org/wiki/Solar_wind\" target=\"_blank\">solar wind</a>. Solar wind that interacts with particles in our magnetosphere near the poles are visible to us as beautiful <a href=\"https://en.m.wikipedia.org/wiki/Aurora\" target=\"_blank\">aurorae</a>, better known as the Northern and Southern Lights.</p>\n<p>In the wider universe, x-rays are emitted during violent cosmic interactions, such as supernovae, feeding <a href=\"https://en.m.wikipedia.org/wiki/Black_hole\" target=\"_blank\">black holes</a>, and collisions between large astronomic bodies. The black scars visible in the background are due to the telescope's sensors being overwhelmed from extremely bright x-ray sources.</p>"
+    },
+    {
+        "title": "Gamma Rays",
+        "bg": "#1f0586",
+        "earth": "http://i.imgur.com/R6lXfPR.png",
+        "sun": "http://i.imgur.com/xHszEPs.png",
+        "moon": "http://i.imgur.com/e3eJCfF.png",
+        "space": "http://i.imgur.com/e6t95rg.jpg",
+        "loading": "http://i.imgur.com/UYfCANH.jpg",
+        "video": "http://youtube.com/watch/RLykC1VN7NY",
+        "content": "<p><a href=\"https://en.m.wikipedia.org/wiki/Gamma_ray\" target=\"_blank\">Gamma rays</a> are the highest-energy radiation in the universe, and we thankfully seldom experience their effects.</p>\n<p>High in Earth's atmosphere, cosmic rays from distant stars and galaxies cause high-energy particle interactions and emit gamma rays. This slow but unceasing process overwhelms terrestrial gamma ray detectors. Gamma rays are visible here as orange noise surrounding the Earth, with the sky displayed within.</p>\n<p>Supernovae, black holes, and blazars can emit <a href=\"https://en.m.wikipedia.org/wiki/Gamma-ray_burst\" target=\"_blank\">gamma-ray bursts</a> (GRB) that travel incredible distances. Though they only do so for an instant and are quite rare, a single GRB originating from within the Milky Way that crossed Earth's path could neutralize our ozone layer, sterilizing our planet in the blink of an eye.</p>"
+    }
+]
