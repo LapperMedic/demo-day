@@ -22,7 +22,7 @@ export default function Info(state){
                             </a>
                         </li>
                         <li title="JSON">
-                            <a href="../js/diffeyes.json" target="_blank">
+                            <a href="https://raw.githubusercontent.com/LapperMedic/demo-day/master/js/diffeyes.json" target="_blank">
                                 <i class="fas fa-code"></i>
                             </a>
                         </li>
