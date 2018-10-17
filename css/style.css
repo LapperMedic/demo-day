@@ -206,7 +206,7 @@ body {
 }
 
 #at-expanding-share-button {
-    opacity: .4;
+    opacity: .75;
 }
 
 #at-expanding-share-button:hover {
@@ -302,7 +302,7 @@ body {
         font-size: 1.5rem;
         font-weight: normal;
     }
-    
+
     #at-expanding-share-button {
         opacity: 1;
     }
