@@ -5,7 +5,7 @@ Our eyes are wonderful and fascinating machines, able to see great distances and
 
 On this tour, you'll be shown images of Earth and the Milky Way with false-color images compiled by advanced telescopes, allowing you to get a better idea of what emits, reflects, and absorbs various types of radiation all around you and in the wider universe.
 
-The concept of information being hidden in plain sight has always fascinated me. Did you know that while the cornea blocks UV rays, some people who have had cataract surgery are able to see narrow bands of ultraviolet? It’s described as a purple-white color best visible surrounding lightning strikes. Facts like this inspired me to look into the concept of being able to see any frequency within the electromagnetic spectrum, and the results are truly interesting.
+Education has always been very important in my life. But despite an eagerness to learn, I often had problems learning and retaining material in school. While learning from lectures and rote memorization may work well enough for some people, I learn best when the content is worded simply, is interactive in nature, and is presented in multiple different media. With that in mind, I've created a simple, interactive experience which I hope you'll find both educational and entertaining.
 
 * Built in JS, with JSON, AJAX, HTML, and CSS
 * Modular construction and rapid page loading
