@@ -10,21 +10,21 @@ import * as State from '../store';
 var root = document.getElementById('root');
 var body = document.querySelector('body');
 var title = document.querySelector('title');
-var infoBox;
-var earthImage;
-var earthMode;
-var sunMode;
-var moonMode;
-var videoMode;
-var emptyMode;
-var demoMode = false;
-var demoTime = 10000; // in milliseconds
-var demoTimeout;
-var demoModeSwitch;
-var displayMode = 0;
+var infoBox;            // Page element for info box, contains textwall and mode buttons
+var earthImage;         // Page element for earth/sun/moon image
+var earthMode;          // Page element for earth mode button, within info box
+var sunMode;            // Page element for sun mode button, within info box
+var moonMode;           // Page element for moon mode button, within info box
+var videoMode;          // Page element for video mode button, within info box
+var emptyMode;          // Page element for empty mode button, within info box
+var demoMode = false;   // Demo mode off by default
+var demoTime = 10000;   // Length between navigation in demoMode, in milliseconds
+var demoTimeout;        // Variable to hold the demoMode timer, necessary for cancelling the timer
+var demoModeSwitch;     // Page element for demoMode switch, top right of screen
+var displayMode = 0;    // Earth mode by default
 var pages = Object.keys(State);
 var router = new Navigo(window.location.origin);
-pages.splice(0, 2); // Remove "About" and "Active" from array
+pages.splice(0, 2);     // Remove "About" and "Active" from array
 
 function render(state) {
     title.textContent = `See with Different Eyes`;
@@ -46,7 +46,7 @@ function render(state) {
         ${Slider(state)}
     `;  // Put the HTML content in the page. Header is title, Earth is Earth image, Info is text block, Slider is navbar
 
-    infoBox = document.querySelector('#info');
+    infoBox = document.getElementById('info');
     earthImage = document.getElementById('earth');
     earthMode = document.getElementById('earth-mode');
     sunMode = document.getElementById('sun-mode');
@@ -55,34 +55,34 @@ function render(state) {
     emptyMode = document.getElementById('empty-mode');
     // Populate the earth div with the correct image for the given page and displayMode
     if (state[state.active].content != 'about') {
-        if (displayMode === 0) {
+        if (displayMode === 0) { // Earth display mode, pull from earth images
             if (state[state.active].earth == 'default')
                 earthImage.style.backgroundImage = ''; // Default earth image from style.css
             else
                 earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].earth}`;
             activeMode(0);
-        } // Earth display mode, pull from earth images
+        }
 
-        else if (displayMode === 1) {
+        else if (displayMode === 1) { // Sun display mode, pull from sun images
             earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].sun}`;
             activeMode(1);
-        } // Sun display mode, pull from sun images
+        }
 
-        else if (displayMode === 2) {
+        else if (displayMode === 2) { // Moon display mode, pull from moon images
             earthImage.style.backgroundImage = `url('https://i.imgur.com/${state[state.active].moon}`;
             activeMode(2);
-        } // Moon display mode, pull from moon images
+        }
 
-        else if (displayMode === 3) {
+        else if (displayMode === 3) { // Video display mode, pull embedded video
             earthImage.style.backgroundImage = 'none';
             earthImage.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${state[state.active].video}?start=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
             activeMode(3); 
-        } // Video display mode, pull embedded video
+        }
 
-        else if (displayMode === 4) {
+        else if (displayMode === 4) { // Empty display mode, hide image and info box
             earthImage.style.backgroundImage = 'none';
             activeMode(4);
-        } // Empty display mode, hide image and info box
+        }
 
         earthMode.addEventListener('click', (event) => { // Add mode switching links
             event.preventDefault();                      // don't take us anywhere
@@ -90,25 +90,25 @@ function render(state) {
             handleNav(`${state.active}`);                // refresh the page
         });
 
-        sunMode.addEventListener('click', (event) => {
+        sunMode.addEventListener('click', (event) => {  // Sun mode link
             event.preventDefault();
             displayMode = 1;
             handleNav(`${state.active}`);
         });
 
-        moonMode.addEventListener('click', (event) => {
+        moonMode.addEventListener('click', (event) => { // Moon mode link
             event.preventDefault();
             displayMode = 2;
             handleNav(`${state.active}`);
         });
 
-        videoMode.addEventListener('click', (event) => {
+        videoMode.addEventListener('click', (event) => { // Video mode link
             event.preventDefault();
             displayMode = 3;
             handleNav(`${state.active}`);
         });
 
-        emptyMode.addEventListener('click', (event) => {
+        emptyMode.addEventListener('click', (event) => { // Empty mode link
             event.preventDefault();
             displayMode = 4;
             handleNav(`${state.active}`);
@@ -155,10 +155,10 @@ function render(state) {
 }
 
 function demo(activePage) {                                      // A demo mode for presenting the site. Auto scrolling.
-    let index = pages.findIndex((page) => page === activePage); // Figure out what index the active page is.
+    let index = pages.findIndex((page) => page === activePage);  // Figure out what index the active page is.
     if (index === 6)                                             // If we're at gamma,
         demoTimeout = setTimeout(() => { router.navigate(pages[0]); }, demoTime); // Set a timer to take us back to radio.
-    else                                                        // Otherwise,
+    else                                                         // Otherwise,
         demoTimeout = setTimeout(() => { router.navigate(pages[index + 1]); }, demoTime); // Set a timer to go forward.
 }
 
@@ -166,7 +166,7 @@ function demoToggle(polarity) {  // A shortcut which cosmetically swaps the demo
     demoModeSwitch.innerHTML = `<i class="fas fa-toggle-${polarity}" title="Autoplay is ${polarity}"></i>`;
 }
 
-function demoOff() {
+function demoOff() {                   // A function which turns demoMode off, distinct from demoToggle()
     demoMode = false;                  // Stop demo mode
     demoToggle('off');                 // toggle the demoMode switch
     clearTimeout(demoTimeout);         // and cancel any timers.
@@ -174,8 +174,8 @@ function demoOff() {
 
 function activeMode(mode) { // Highlighting for mode buttons
     var modeArray = [earthMode, sunMode, moonMode, videoMode, emptyMode];
-    modeArray.forEach((mode) => mode.classList.remove('active'));
-    modeArray[mode].classList.add('active');
+    modeArray.forEach((mode) => mode.classList.remove('active')); // Remove all highlighting
+    modeArray[mode].classList.add('active'); // Highlight the current mode button
     if (mode === 4) // If we're in hidden mode, hide the info box
         infoBox.classList.add('hidden');
     else
@@ -184,16 +184,15 @@ function activeMode(mode) { // Highlighting for mode buttons
 
 function handleNav(activePage) {
     var newState = Object.assign({}, State);
-
     newState.active = activePage;
     render(newState);
 }
 
 router
-    .on('/:page', (params) => { // Redirect any 404 to the landing page
+    .on('/:page', (params) => { // Check for valid page before navigating
         if(Object.keys(State).findIndex((page) => page === params.page) != -1 && params.page != 'active')
             handleNav(params.page);
-        else
+        else  // Redirect any 404 to the landing page
             handleNav('visible');
     })
     .on('/', () => handleNav('visible'))
