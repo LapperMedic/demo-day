@@ -1,6 +1,6 @@
 #root {
     display: grid;
-    grid-template-rows: min-content 100% min-content;
+    grid-template-rows: min-content auto min-content;
     grid-template-columns: 1fr 2fr;
     font-family: 'Verdana', sans-serif;
     min-height: 98vh;
@@ -216,7 +216,7 @@ body {
 @media screen and (min-width: 765px) {
     #root {
         min-height: 97vh;
-        grid-template-rows: min-content 100% min-content;
+        grid-template-rows: min-content auto min-content;
         grid-template-columns: 2fr 1fr;
     }
 
